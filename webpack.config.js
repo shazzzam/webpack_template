@@ -10,6 +10,7 @@ const extractCSS = require('./webpack/css.extract')
 const uglifyJS = require('./webpack/js.uglify')
 const images = require('./webpack/images')
 const babelJS = require('./webpack/js.babel')
+const fonts = require('./webpack/fonts')
 
 const PATHS = {
   source: path.join(__dirname, 'src'),
@@ -49,6 +50,7 @@ const common = merge([
   pug(),
   images(),
   babelJS(),
+  fotns(),
 ])
 
 module.exports = function(env) {
